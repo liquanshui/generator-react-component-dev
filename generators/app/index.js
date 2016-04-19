@@ -78,8 +78,8 @@ module.exports = yeoman.generators.Base.extend({
                 data
             );
             this.fs.copyTpl(
-                this.templatePath('index.js'),
-                this.destinationPath('index.js'),
+                this.templatePath('npmrc'),
+                this.destinationPath('.npmrc'),
                 data
             );
             this.fs.copyTpl(

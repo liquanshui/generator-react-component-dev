@@ -2,23 +2,29 @@
   "name": "<%= name %>",
   "version": "<%= version %>",
   "description": "<%= desc %>",
-  "main": "index.js",
+  "src": "./src/<%= name %>.js",
+  "main": "./build/<%= name %>.js",
   "scripts": {
     "dev": "node node_modules/.bin/cat-server",
-    "build": "node node_modules/.bin/pre-publish"
+    "prepublish": "node node_modules/.bin/pre-publish"
   },
+  "keywords": [
+      "react",
+      "<%= name %>",
+      "cat-design"
+  ],
   "license": "ISC",
   "devDependencies": {
-    "cat-server": "^0.2.2",
-    "babel-core": "^6.1.2",
-    "babel-loader": "^6.0.1",
+    "@mtfe/cat-server": "^0.3.2",
+    "babel-core": "^5.x",
+    "babel-loader": "^5.x",
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
-    "css-loader": "^0.22.0",
+    "css-loader": "^0.21.0",
     "style-loader": "^0.13.0"
   },
   "dependencies": {
-    "myui-core": "^0.0.1",
+    "myui-core": "^0.1.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2"
   }
